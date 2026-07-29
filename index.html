@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TOKN ZX Download</title>
+
+<style>
+body{
+    margin:0;
+    background:#0d1117;
+    color:white;
+    font-family:Arial;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.box{
+    background:#161b22;
+    padding:40px;
+    border-radius:15px;
+    text-align:center;
+    width:350px;
+}
+
+button{
+    background:#238636;
+    color:white;
+    border:none;
+    padding:15px 30px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:18px;
+}
+
+button:hover{
+    background:#2ea043;
+}
+
+#continue{
+    display:none;
+    margin-top:20px;
+}
+
+h1{
+    margin-bottom:20px;
+}
+
+#timer{
+    font-size:40px;
+    margin:20px;
+}
+</style>
+
+</head>
+<body>
+
+<div class="box">
+
+<h1>TOKN ZX</h1>
+
+<button onclick="start()">Download</button>
+
+<div id="timer"></div>
+
+<button id="continue" onclick="location.href='https://www.youtube.com/@YOURCHANNEL'">
+Continue
+</button>
+
+</div>
+
+<script>
+
+function start(){
+
+let time=20;
+
+document.querySelector("button").style.display="none";
+
+timer.innerHTML=time;
+
+let x=setInterval(function(){
+
+time--;
+
+timer.innerHTML=time;
+
+if(time<=0){
+
+clearInterval(x);
+
+timer.innerHTML="✔ Ready";
+
+document.getElementById("continue").style.display="inline-block";
+
+}
+
+},1000);
+
+}
+
+</script>
+
+</body>
+</html>
